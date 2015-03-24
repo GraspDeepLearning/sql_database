@@ -23,4 +23,8 @@
   <run_depend>roscpp</run_depend>
   <run_depend>yaml-cpp</run_depend>
 
+  <export>
+    <cpp cflags="-I${prefix}/database_interface/include -I${prefix}/database_interface/include/database_interface" lflags=" -L${prefix}/../../../devel/lib -lpostgresql_database"/>
+  </export>
+
 </package>

@@ -25,12 +25,15 @@ endif(NOT HAVE_LIBPQ)
 
 link_directories(${PQ_LIB_DIR})
 include_directories(${PQ_INCLUDE_DIR})
+
 add_library(postgresql_database src/postgresql_database.cpp)
+
 target_link_libraries(postgresql_database pq)
 target_link_libraries(postgresql_database yaml-cpp)
 target_link_libraries(postgresql_database ${catkin_LIBRARIES})
 
 add_executable(postgresql_interface_test src/postgresql_interface_test.cpp)
+
 target_link_libraries(postgresql_interface_test postgresql_database)
 target_link_libraries(postgresql_interface_test ${catkin_LIBRARIES})
 

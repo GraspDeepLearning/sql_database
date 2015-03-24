@@ -21,4 +21,3 @@ add_definitions(-DHAVE_NEW_YAMLCPP)
 endif(NOT ${yaml-cpp_VERSION} VERSION_LESS "0.5")
 
 add_subdirectory(database_interface)
-add_subdirectory(student_database)
